@@ -1,7 +1,0 @@
-{
-  "buildCommand": "cd bhujal-water && npm install && npm run build",
-  "outputDirectory": "bhujal-water/dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
