@@ -27,7 +27,7 @@ export default function CustomBrandingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 min-h-[70vh] flex items-center overflow-hidden">
+      <section className="relative py-16 sm:py-24 lg:py-28 min-h-[100svh] sm:min-h-[70vh] flex items-center overflow-hidden">
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img
@@ -36,54 +36,100 @@ export default function CustomBrandingPage() {
             className="w-full h-full object-cover object-center"
           />
           {/* Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/90 via-ocean-950/70 to-ocean-950/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-ocean-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/95 via-ocean-950/80 to-ocean-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-ocean-950/50" />
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-gold-500/8 rounded-full blur-3xl animate-wave" />
           <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-ocean-400/8 rounded-full blur-3xl" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-gold-400 text-sm font-semibold tracking-[0.3em] uppercase">Unique Selling Point</span>
-              <h1 className="text-5xl sm:text-6xl font-black leading-tight text-white mt-3 mb-6">
+              <span className="text-gold-400 text-xs sm:text-sm font-semibold tracking-[0.25em] sm:tracking-[0.3em] uppercase">Unique Selling Point</span>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white mt-2 sm:mt-3 mb-4 sm:mb-6">
                 Your Brand, <br /><span className="gold-text">Every Bottle</span>
               </h1>
-              <p className="text-white/60 text-lg leading-relaxed mb-4">
+              <p className="text-white/60 text-sm sm:text-lg leading-relaxed mb-3 sm:mb-4">
                 Make a lasting impression with BHUJAL's custom branding service. 
                 Transform ordinary water bottles into powerful brand ambassadors.
               </p>
-              <p className="text-white/60 text-lg leading-relaxed mb-10">
+              <p className="text-white/60 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-10">
                 Perfect for <span className="text-gold-400 font-semibold">corporate events, weddings, hotels, 
                 restaurants, promotions, and parties</span> — any quantity, any size.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="btn-primary text-base px-10 py-4">
+
+              {/* Bottles row — visible on mobile only */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex lg:hidden justify-center mb-8 relative"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gold-400/10 rounded-full blur-2xl scale-150" />
+                  <div className="flex gap-3 items-end relative">
+                    {[
+                      { src: '/2L.jpeg', label: 'WEDDING', tint: 'from-pink-500/40' },
+                      { src: '/1L.jpeg',       label: 'CORPORATE', tint: 'from-gold-500/40' },
+                      { src: '/2L.jpeg',                             label: '2 LITRE',   tint: 'from-blue-500/40' },
+                    ].map((bottle, i) => (
+                      <motion.div
+                        key={bottle.label}
+                        className="relative rounded-xl overflow-hidden shadow-2xl"
+                        style={{ width: i === 1 ? 90 : 75, height: i === 1 ? 145 : 120 }}
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
+                      >
+                        <img
+                          src={bottle.src}
+                          alt={`BHUJAL ${bottle.label} Custom Bottle`}
+                          className="w-full h-full object-cover object-bottom"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-t ${bottle.tint} to-transparent`} />
+                        <div className="absolute bottom-1.5 left-0 right-0 text-center">
+                          <span className="text-white text-[9px] font-black tracking-widest drop-shadow-lg">{bottle.label}</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                  <motion.div
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 glass-gold rounded-full px-3 py-1.5 whitespace-nowrap"
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <span className="text-gold-400 text-[10px] font-bold tracking-wider">✦ CUSTOM BRANDED ✦</span>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link to="/contact" className="btn-primary text-sm sm:text-base px-6 sm:px-10 py-3 sm:py-4 text-center">
                   Request Custom Branding
                 </Link>
                 <a
                   href="https://wa.me/918247836366?text=Hi!%20I'm%20interested%20in%20custom%20branded%20water%20bottles."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline text-base px-10 py-4 text-center"
+                  className="btn-outline text-sm sm:text-base px-6 sm:px-10 py-3 sm:py-4 text-center"
                 >
                   WhatsApp Us
                 </a>
               </div>
             </motion.div>
 
-            {/* Mockup visual */}
+            {/* Mockup visual — desktop only */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex justify-center"
+              className="hidden lg:flex justify-center"
             >
               <div className="relative">
                 {/* Glow */}
@@ -91,9 +137,9 @@ export default function CustomBrandingPage() {
                 {/* 3 bottles side by side */}
                 <div className="flex gap-4 items-end relative">
                   {[
-                    { src: '/Water%20Bottle%20___.jpg%20(1).jpeg', label: 'WEDDING', tint: 'from-pink-500/40' },
-                    { src: '/Water%20Bottle%20___.jpg.jpeg',       label: 'CORPORATE', tint: 'from-gold-500/40' },
-                    { src: '/IMG_8812.JPG.jpeg',                   label: 'HOTEL',     tint: 'from-blue-500/40' },
+                    { src: '/2L.jpeg', label: 'WEDDING', tint: 'from-pink-500/40' },
+                    { src: '/1L.jpeg',       label: 'CORPORATE', tint: 'from-gold-500/40' },
+                    { src: '/2L.jpeg',                             label: '2 LITRE',   tint: 'from-blue-500/40' },
                   ].map((bottle, i) => (
                     <motion.div
                       key={bottle.label}
