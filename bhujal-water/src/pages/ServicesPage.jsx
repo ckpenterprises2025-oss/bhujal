@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -74,6 +75,11 @@ const customUsesCases = [
 ]
 
 export default function ServicesPage() {
+  useEffect(() => {
+    document.title = 'Our Services — RO Water, Bulk Supply & More | BHUJAL'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'BHUJAL offers packaged drinking water, RO + Active Alkaline purification, bulk water supply, and custom branded bottles. Serving homes, hotels and businesses in Andhra Pradesh.')
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Hero */}

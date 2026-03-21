@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -18,6 +19,11 @@ const useCases = [
 ]
 
 export default function CustomBrandingPage() {
+  useEffect(() => {
+    document.title = 'Custom Branded Water Bottles — Events & Hotels | BHUJAL'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Custom branded water bottles for weddings, corporate events, hotels and promotions. Your logo on premium BHUJAL bottles. Available in 100ml to 50L. Order from Andhra Pradesh.')
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Hero */}

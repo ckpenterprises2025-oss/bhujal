@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ContactForm from '../components/ContactForm'
 
@@ -56,6 +57,11 @@ const contactDetails = [
 ]
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = 'Contact Us — BHUJAL Water | +91 82478 36366'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Get in touch with BHUJAL by CKP Enterprises. Call +91 82478 36366 or email ckpenterprises2025@gmail.com. We supply packaged drinking water across Andhra Pradesh.')
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Hero */}

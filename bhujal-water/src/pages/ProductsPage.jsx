@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import OrderModal from '../components/OrderModal'
@@ -71,6 +71,11 @@ const products = [
 ]
 
 export default function ProductsPage() {
+  useEffect(() => {
+    document.title = 'Our Products — Water Bottles 100ml to 50L | BHUJAL'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Shop BHUJAL packaged drinking water in 8 sizes: 100ml, 200ml, 500ml, 1L, 2L, 5L, 20L and 50L. RO + Active Alkaline purified. Order bulk water supply in Andhra Pradesh.')
+  }, [])
+
   const [orderModal, setOrderModal] = useState(null) // holds selected product or null
 
   const openOrder = (product) => setOrderModal(product)

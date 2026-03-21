@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -58,6 +59,11 @@ const testimonials = [
 ]
 
 export default function HomePage() {
+  useEffect(() => {
+    document.title = 'BHUJAL — Premium Packaged Drinking Water | CKP Enterprises'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'BHUJAL by CKP Enterprises — Premium RO + Active Alkaline packaged drinking water in Andhra Pradesh. Available in 100ml to 50L. Custom branding for events, hotels & corporates.')
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* ── HERO ── */}

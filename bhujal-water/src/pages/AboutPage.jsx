@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -34,6 +35,11 @@ const milestones = [
 ]
 
 export default function AboutPage() {
+  useEffect(() => {
+    document.title = 'About Us — BHUJAL | CKP Enterprises, Kakinada'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Learn about BHUJAL and CKP Enterprises — founded in Kakinada, Andhra Pradesh. Our mission is to deliver pure RO + Active Alkaline packaged drinking water to homes and businesses.')
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
