@@ -130,7 +130,7 @@ export default function AboutPage() {
               <h2 className="section-title mt-3 mb-6">CKP <span className="gold-text">Enterprises</span></h2>
               <p className="text-white/70 leading-relaxed mb-6">
                 CKP Enterprises is a forward-thinking beverages and water purification company based in 
-                Ramanayyapeta, Andhra Pradesh. Founded in 2025 by Sri Charan Thangisetty, we set out with 
+                Ramanayyapeta, Andhra Pradesh. Founded in 2025, we set out with 
                 one mission — to provide the purest, highest-quality packaged drinking water to every corner of the region.
               </p>
               <p className="text-white/70 leading-relaxed mb-6">
