@@ -299,8 +299,8 @@ export default function HomePage() {
                   alt={item.label}
                   className="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-transparent opacity-100 transition-all duration-300" />
+                <div className="absolute bottom-3 left-3 opacity-100 transition-all duration-300 translate-y-0">
                   <span className="text-white text-sm font-semibold">{item.label}</span>
                 </div>
                 <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300">
