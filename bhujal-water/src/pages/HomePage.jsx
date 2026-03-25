@@ -52,11 +52,6 @@ const bottleSizes = [
   { size: '50L',   img: '/50L.jpeg' },
 ]
 
-const testimonials = [
-  { name: 'Ravi Kumar', role: 'Hotel Manager', text: 'BHUJAL has been our go-to for 2 years. Quality is consistently excellent and delivery is always on time.' },
-  { name: 'Priya Sharma', role: 'Event Organizer', text: 'Custom branded bottles for our wedding were stunning. Guests were impressed by the premium look!' },
-  { name: 'Suresh Reddy', role: 'Corporate Client', text: 'Best packaged water in the region. The alkaline water is refreshing and our team loves it.' },
-]
 
 export default function HomePage() {
   useEffect(() => {
@@ -366,55 +361,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-24 bg-ocean-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gold-400 text-sm font-semibold tracking-[0.3em] uppercase">Testimonials</span>
-            <h2 className="section-title mt-3">Trusted by <span className="gold-text">Hundreds</span></h2>
-          </motion.div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                className="glass rounded-2xl p-8 card-hover group relative overflow-hidden border border-white/5 hover:border-gold-400/15"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-              >
-                {/* Left accent border */}
-                <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-gradient-to-b from-transparent via-gold-400/60 to-transparent rounded-full" />
-                {/* Quote mark */}
-                <div className="text-5xl text-gold-400/20 font-black leading-none mb-2 select-none">“</div>
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, s) => (
-                    <svg key={s} className="w-4 h-4 text-gold-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.6)]" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-white/65 text-sm leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-gold-400/30 to-ocean-600/30 border border-gold-400/20 flex items-center justify-center text-gold-400 font-black text-sm flex-shrink-0">
-                    {t.name[0]}
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">{t.name}</p>
-                    <p className="text-gold-400/70 text-xs">{t.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA BANNER ── */}
       <section className="py-24 relative overflow-hidden">

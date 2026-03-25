@@ -12,7 +12,6 @@ const contactDetails = [
     title: 'Phone',
     lines: [
       <a key="p1" href="tel:+918247836366" className="hover:text-gold-400 transition-colors">+91 82478 36366</a>,
-      <a key="p2" href="tel:+916303836366" className="hover:text-gold-400 transition-colors">+91 63038 36366</a>,
     ],
   },
   {
@@ -36,9 +35,12 @@ const contactDetails = [
     ),
     title: 'Address',
     lines: [
-      <span key="a1">69/1-26G, Rajendra Nagar,</span>,
-      <span key="a2">Ramanayyapeta, Andhra Pradesh</span>,
-      <span key="a3" className="text-gold-400">533003</span>,
+      <span key="a1">Building No./Flat No.: 69-1-2- sri somulamma temple</span>,
+      <span key="a2">Road/Street: Sri somulamma Temple</span>,
+      <span key="a3">City/Town/Village: Kakinada</span>,
+      <span key="a4">District: Kakinada</span>,
+      <span key="a5">State: Andhra Pradesh</span>,
+      <span key="a6" className="text-gold-400">PIN Code: 533005</span>,
     ],
   },
   {
@@ -204,12 +206,12 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span className="text-white/80 text-sm font-medium">69/1-26G, Rajendra Nagar, Ramanayyapeta, AP 533003</span>
+                  <span className="text-white/80 text-sm font-medium">69-1-2- sri somulamma temple, Sri somulamma Temple, Kakinada, Andhra Pradesh 533005</span>
                 </div>
                 <div className="relative h-72">
                   <iframe
                     title="BHUJAL CKP Enterprises Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0123!2d82.2185!3d16.9891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3827b8f6d0e5c1%3A0x0!2sRamanayyapeta%2C%20Andhra%20Pradesh%20533003!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.6034879225276!2d82.23147847515602!3d16.99404338382764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU5JzM4LjYiTiA4MsKwMTQnMDIuNiJF!5e0!3m2!1sen!2sin!4v1774458804127!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
