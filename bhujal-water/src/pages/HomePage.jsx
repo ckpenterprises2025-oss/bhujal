@@ -45,11 +45,11 @@ const bottleSizes = [
   { size: '100ml', img: '/100ml.jpeg' },
   { size: '200ml', img: '/200ml.jpeg' },
   { size: '500ml', img: '/500ml.jpeg' },
-  { size: '1L',    img: '/1L.jpeg' },
-  { size: '2L',    img: '/2L.jpeg' },
-  { size: '5L',    img: '/5L.jpeg' },
-  { size: '20L',   img: '/20L.jpeg' },
-  { size: '50L',   img: '/50L.jpeg' },
+  { size: '1L', img: '/1L.jpeg' },
+  { size: '2L', img: '/2L.jpeg' },
+  { size: '5L', img: '/5L.jpeg' },
+  { size: '20L', img: '/20L.jpeg' },
+  { size: '50L', img: '/50L.jpeg' },
 ]
 
 
@@ -74,7 +74,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/90 via-ocean-950/70 to-ocean-950/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-ocean-950/40" />
         </div>
-        
+
         {/* Animated background blobs */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-ocean-500/10 rounded-full blur-3xl animate-wave" />
@@ -134,7 +134,7 @@ export default function HomePage() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-white/60 text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0">
-                Experience the essence of pure, refreshing water — RO + Active Alkaline technology. 
+                Experience the essence of pure, refreshing water — RO + Active Alkaline technology.
                 Available from <span className="text-gold-400 font-semibold">100ml to 50L</span>, delivered to your doorstep.
               </motion.p>
 
@@ -151,9 +151,9 @@ export default function HomePage() {
               {/* Stats */}
               <motion.div variants={fadeUp} className="flex gap-8 mt-12 justify-center lg:justify-start">
                 {[
-                  { num: '8+',   label: 'Bottle Sizes' },
+                  { num: '8+', label: 'Bottle Sizes' },
                   { num: '24/7', label: 'Availability' },
-                  { num: '100%', label: 'Pure & Safe'  },
+                  { num: '100%', label: 'Pure & Safe' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center group">
                     <p className="text-3xl font-black text-gold-400 group-hover:text-gold-300 transition-colors drop-shadow-[0_0_12px_rgba(251,191,36,0.5)]">{stat.num}</p>
@@ -205,7 +205,7 @@ export default function HomePage() {
           <div className="flex gap-0 marquee whitespace-nowrap">
             {[...Array(2)].map((_, j) => (
               <div key={j} className="flex items-center gap-8 pr-8">
-                {['Premium Water','RO+Alkaline','24/7 Delivery','Custom Branding','100% Pure','8 Bottle Sizes','Kakinada, AP','BHUJAL Water','BIS Certified','Bulk Orders'].map((item) => (
+                {['Premium Water', 'RO+Alkaline', '24/7 Delivery', 'Custom Branding', '100% Pure', '8 Bottle Sizes', 'Kakinada, AP', 'BHUJAL Water', 'BIS Certified', 'Bulk Orders'].map((item) => (
                   <span key={item} className="flex items-center gap-3 text-sm font-semibold tracking-wider text-white/50">
                     <span className="w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0" />
                     {item}
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <img
                   src={item.src}
                   alt={item.label}
-                  className="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-[center_30%] transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-transparent opacity-100 transition-all duration-300" />
                 <div className="absolute bottom-3 left-3 opacity-100 transition-all duration-300 translate-y-0">

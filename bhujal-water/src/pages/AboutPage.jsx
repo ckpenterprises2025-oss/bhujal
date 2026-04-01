@@ -261,9 +261,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { src: '/IMG_8811.JPG.jpeg', label: 'Pure Collection' },
-              { src: '/IMG_8814.JPG.jpeg', label: 'Premium Quality' },
-              { src: '/IMG_8813.JPG.jpeg', label: 'Every Occasion' },
-              { src: '/IMG_8814.JPG%20(1).jpeg', label: 'Custom Branded' },
+              { src: '/IMG_8811.JPG.jpeg', label: 'Premium Quality' },
+              { src: '/IMG_8811.JPG.jpeg', label: 'Every Occasion' },
+              { src: '/IMG_8811.JPG.jpeg', label: 'Custom Branded' },
             ].map((photo, i) => (
               <motion.div
                 key={i}
